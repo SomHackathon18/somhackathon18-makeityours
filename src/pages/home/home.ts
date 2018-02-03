@@ -6,9 +6,11 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  createdCode=null;
+  qrData=null;
   constructor(public navCtrl: NavController) {
-
   }
-
+  createCode() {
+    this.createdCode = this.qrData;
+  }
 }

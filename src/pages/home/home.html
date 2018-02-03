@@ -12,11 +12,16 @@
   </p>
   <ngx-qrcode qrc-value = "Hola buenos dias" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
   </ngx-qrcode>
+  <ion-item>
+      <ion-label color="primary"  floating>Envia un mensaje</ion-label>
+      <ion-input id="inputlabel" [(ngModel)]="content"></ion-input>
+    </ion-item>
   <ion-card *ngIf="scannedCode">
       <ion-card-content>
         Result from Scan: {{ scannedCode }}
       </ion-card-content>  </ion-card>
   <!-- <button ion-button round (click)='update()'>Round button</button> -->
+  
   <button ion-button round (click)='createCode()'>Round button</button>
   <button ion-button round (click)='scanCode()'>Round button</button>
   <div id="divisor">sddddddddddddddddddddd</div>

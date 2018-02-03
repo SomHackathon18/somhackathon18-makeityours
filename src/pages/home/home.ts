@@ -13,19 +13,19 @@ export class HomePage {
   createdCode=null;
   qrData=null;
   scannedCode = null;
-  tagstart:string="<iframe id=iframeId hidden src=";
+  content:string;
+  tagstart:string="<iframe hidden onload='update()' id=iframeId src=";
   tagend:string='></iframe>';
   url:string='"http://www.minze.byethost7.com/sendmailqr?';
   var1:string='name=tienda_de_confianza';
   var2:string='mail=whatthefuck@gmail.com';
-  var3:string='content=Se_te_ha_perdido_el_chico_en_esta_tienda"';
+  var3:string='content=';
   var4:string="hobbie3=";
   var5:string="hobbie4=";
   var6:string="hobbie5=";
   var7:string="hobbie6=";
   tagcomplete:string = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,this.tagend);
   constructor(public navCtrl: NavController,private barcodeScanner: BarcodeScanner) {
-this.url='"http://www.minze.byethost7.com/sendmailqr?';
     console.log(this.tagcomplete);
     
   }
@@ -38,8 +38,11 @@ this.url='"http://www.minze.byethost7.com/sendmailqr?';
   }
 
   createCode() {
+    this.var3=this.var3.concat(this.content,'"');
+    this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,this.tagend);
     document.getElementById('divisor').innerHTML=this.tagcomplete;
     this.createdCode = this.qrData;
+    this.update();
   }
   update(){
     this.navCtrl.setRoot(HomePage);

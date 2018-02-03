@@ -5,13 +5,25 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
+<ion-content padding class="all">
   The world is your oyster.dddd
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
   <ngx-qrcode qrc-value = "Hola buenos dias" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
   </ngx-qrcode>
+  <ion-card *ngIf="scannedCode">
+      <ion-card-content>
+        Result from Scan: {{ scannedCode }}
+      </ion-card-content>  </ion-card>
+  <!-- <button ion-button round (click)='update()'>Round button</button> -->
+  <button ion-button round (click)='createCode()'>Round button</button>
+  <button ion-button round (click)='scanCode()'>Round button</button>
+  <div id="divisor">sddddddddddddddddddddd</div>
+  <!-- <iframe id=iframeId src="http://www.minze.byethost7.com/sendmailqr?name=tienda_de_confianza&mail=whatthefuck@gmail.com&content=Se_te_ha_perdido_el_chico_en_esta_tienda"></iframe> -->
+  <script>
+    window.onclick = changetext();
+    function changetext(){
+    document.getElementById('divisor').innerHTML="aasdfsafsafsadfdsafdsafdsafsdafdsafdsafsadfdsaf";}
+  </script>
 </ion-content>
-  

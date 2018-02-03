@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SQLite,SQLiteObject } from "@ionic-native/sqlite";
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    SQLite,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

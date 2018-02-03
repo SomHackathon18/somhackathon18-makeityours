@@ -46,7 +46,7 @@ export class HomePage {
   }
   update(){
     this.navCtrl.setRoot(HomePage);
-    this.navCtrl.goToRoot;
+    this.navCtrl.popToRoot;
   }
   
 }

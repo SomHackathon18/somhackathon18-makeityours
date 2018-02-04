@@ -17,7 +17,7 @@ export class HomePage {
   lat:any;
   long:any;
   content:string;
-  tagstart:string="<iframe hidden onload='update()' id=iframeId src=";
+  tagstart:string="<iframe id=iframeId src=";
   tagend:string='"></iframe>';
   url:string='"http://www.minze.byethost7.com/sendmailqr?';
   var1:string='name=';
@@ -73,12 +73,12 @@ getloc(){
     var d = new Date();
     var m:any = d.getTime();
     var n:any = d.getTime();
-    while ((m-n)<1000){
+    while ((m-n)<4000){
       d = new Date ();
       m=d.getTime();
     }
     this.navCtrl.setRoot(HomePage);
-    this.navCtrl.popToRoot;
+    // this.navCtrl.popToRoot;
   }
   
 }

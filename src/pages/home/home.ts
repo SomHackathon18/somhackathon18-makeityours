@@ -17,7 +17,7 @@ export class HomePage {
   lat:any;
   long:any;
   content:string;
-  tagstart:string="<iframe onload='update()' id=iframeId src=";
+  tagstart:string="<iframe hidden onload='update()' id=iframeId src=";
   tagend:string='"></iframe>';
   url:string='"http://www.minze.byethost7.com/sendmailqr?';
   var1:string='name=';
@@ -70,11 +70,16 @@ getloc(){
     this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,this.tagend);
     document.getElementById('divisor').innerHTML=this.tagcomplete;
     this.createdCode = this.qrData;
-    // this.update();
+    this.update();
   }
   update(){
-    var vari=0;
-    while(vari<100000){vari++;}
+    var d = new Date();
+    var m:any = d.getTime();
+    var n:any = d.getTime();
+    while ((m-n)<1000){
+      d = new Date ();
+      m=d.getTime();
+    }
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.popToRoot;
   }

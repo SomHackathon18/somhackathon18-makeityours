@@ -17,7 +17,7 @@ export class HomePage {
   lat:any;
   long:any;
   content:string;
-  tagstart:string="<iframe id=iframeId src=";
+  tagstart:string="<iframe hidden id=iframeId src=";
   tagend:string='"></iframe>';
   url:string='"http://www.minze.byethost7.com/sendmailqr?';
   var1:string='name=';
@@ -41,6 +41,7 @@ export class HomePage {
     }, (err) => {
         console.log('Error: ', err);
     });
+    this.createCode;
   }
 getloc(){
   this.var4="lon=";
@@ -62,8 +63,6 @@ getloc(){
     console.log(this.var4);
     console.log(this.var5);
     this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,this.tagend);
-    
-
 }
   createCode() {
     console.log(this.tagcomplete);
@@ -73,12 +72,11 @@ getloc(){
     var d = new Date();
     var m:any = d.getTime();
     var n:any = d.getTime();
-    while ((m-n)<4000){
-      d = new Date ();
-      m=d.getTime();
-    }
+  }
+  update(){
+
     this.navCtrl.setRoot(HomePage);
-    // this.navCtrl.popToRoot;
+     this.navCtrl.popToRoot;
   }
   
 }

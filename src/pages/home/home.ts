@@ -53,16 +53,14 @@ getloc(){
     this.var5=this.var5.concat(this.long);
     this.var2='store=zara'; 
     var provisional :string ="";
-    provisional= provisional.concat("lat :",this.lat,"long: ",this.long); 
+    provisional= provisional.concat(this.var1,this.var3); 
     document.getElementById('divisor').innerHTML=provisional;
     console.log(this.var1);
     console.log(this.var2);
     console.log(this.var3);
     console.log(this.var4);
     console.log(this.var5);
-
     this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,"&",this.var4,"&",this.var5,this.tagend);
-
     console.log(this.tagcomplete);
     alert( this.var1+ '\n' +
     this.var2+ '\n' +

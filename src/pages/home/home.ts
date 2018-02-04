@@ -34,7 +34,8 @@ export class HomePage {
     console.log(this.tagcomplete);
     
   }
-  scanCode() {
+  scanCode() 
+  {//scan the qr code
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
       var parts=this.scannedCode.split(",");
@@ -48,14 +49,14 @@ export class HomePage {
 getloc(){
   this.var4="lon=";
   this.var5="lat=";
-  var any = this.geolocation.getCurrentPosition();
+  var any = this.geolocation.getCurrentPosition();//get the current location to send if available
   this.geolocation.getCurrentPosition().then((position) => {
-    this.lat = position.coords.latitude;
+    this.lat = position.coords.latitude;//store the position
     this.long = position.coords.longitude;
     this.var4=this.var4.concat(this.lat);
     this.var5=this.var5.concat(this.long);
   });
-    this.var2='store=zara'; 
+    this.var2='store=zara de granollers.'; 
     var provisional :string ="";
     provisional= provisional.concat(this.var1,this.var3); 
     document.getElementById('divisor').innerHTML=provisional;
@@ -76,6 +77,7 @@ getloc(){
     var n:any = d.getTime();
   }
   switchcards(){
+    // switch the train/bus cards to use
     var butjove:any = document.getElementById('butjove');
     var but10:any = document.getElementById('but10');
     var steps =0.1;
@@ -97,9 +99,11 @@ getloc(){
     }
   }
   changepage(){
+    //change the page
     this.navCtrl.push(HistoryPage);
   }
   update(){
+    // in order to avoid a bug, we have to refresh a webpage but we dont know how to do it AFTER loading the iframe
     this.navCtrl.setRoot(HomePage);
      this.navCtrl.popToRoot;
   }

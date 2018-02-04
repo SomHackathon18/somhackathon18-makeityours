@@ -62,11 +62,6 @@ getloc(){
     console.log(this.var5);
     this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,"&",this.var4,"&",this.var5,this.tagend);
     console.log(this.tagcomplete);
-    alert( this.var1+ '\n' +
-    this.var2+ '\n' +
-    this.var3+ '\n' +
-    this.var4+ '\n' +
-    this.var5+ '\n');
 });
 }
   createCode() {

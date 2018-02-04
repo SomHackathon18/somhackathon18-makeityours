@@ -22,7 +22,7 @@ export class HomePage {
   url:string='"http://www.minze.byethost7.com/sendmailqr?';
   var1:string='name=';
   var2:string='store=';
-  var3:string='mail= ';
+  var3:string='mail=';
   var4:string="long=";
   var5:string="lat=";
   var6:string="hobbie5=";
@@ -52,7 +52,9 @@ getloc(){
     this.var4=this.var4.concat(this.lat);
     this.var5=this.var5.concat(this.long);
     this.var2='store=zara'; 
-
+    var provisional :string ="";
+    provisional= provisional.concat("lat :",this.lat,"long: ",this.long); 
+    document.getElementById('divisor').innerHTML=provisional;
     console.log(this.var1);
     console.log(this.var2);
     console.log(this.var3);

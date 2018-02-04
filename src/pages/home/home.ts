@@ -23,7 +23,7 @@ export class HomePage {
   var1:string='name=';
   var2:string='store=';
   var3:string='mail=';
-  var4:string="lon=";
+  var4:string="long=";
   var5:string="lat=";
   var6:string="hobbie5=";
   var7:string="hobbie6=";
@@ -37,8 +37,7 @@ export class HomePage {
       this.scannedCode = barcodeData.text;
       var parts=this.scannedCode.split(",");
       this.var1=this.var1.concat(parts[0]);
-      this.var2=this.var2.concat(parts[1]);
-      this.var3=this.var3.concat(parts[2]);
+      this.var3=this.var3.concat(parts[1]);
     }, (err) => {
         console.log('Error: ', err);
     });
@@ -51,7 +50,8 @@ getloc(){
     this.lat = position.coords.latitude;
     this.long = position.coords.longitude;
     this.var4=this.var4.concat(this.lat);
-    this.var5=this.var5.concat(this.long); 
+    this.var5=this.var5.concat(this.long);
+    this.var2='store=zara'; 
     alert( this.var1+ '\n' +
     this.var2+ '\n' +
     this.var3+ '\n' +

@@ -18,11 +18,11 @@ export class HomePage {
   long:any;
   content:string;
   tagstart:string="<iframe hidden onload='update()' id=iframeId src=";
-  tagend:string='></iframe>';
+  tagend:string='"></iframe>';
   url:string='"http://www.minze.byethost7.com/sendmailqr?';
   var1:string='name=';
   var2:string='store=';
-  var3:string='mail=';
+  var3:string='mail= ';
   var4:string="long=";
   var5:string="lat=";
   var6:string="hobbie5=";
@@ -76,6 +76,8 @@ getloc(){
     this.update();
   }
   update(){
+    var vari=0;
+    while(vari<100000){vari++;}
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.popToRoot;
   }

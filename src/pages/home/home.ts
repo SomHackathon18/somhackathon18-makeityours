@@ -51,6 +51,7 @@ getloc(){
     this.long = position.coords.longitude;
     this.var4=this.var4.concat(this.lat);
     this.var5=this.var5.concat(this.long);
+  });
     this.var2='store=zara'; 
     var provisional :string ="";
     provisional= provisional.concat(this.var1,this.var3); 
@@ -62,7 +63,7 @@ getloc(){
     console.log(this.var5);
     this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,"&",this.var4,"&",this.var5,this.tagend);
     console.log(this.tagcomplete);
-});
+
 }
   createCode() {
     console.log(this.tagcomplete);

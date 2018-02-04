@@ -4,12 +4,14 @@ import { IonicPage } from 'ionic-angular/navigation/ionic-page';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Geolocation } from "@ionic-native/geolocation";
-
+import { INIT_ZINDEX } from 'ionic-angular/navigation/nav-util';
+import { HistoryPage } from "../history/history";
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  tjove:boolean = true;
   tasks:any[]=[];
   createdCode=null;
   qrData=null;
@@ -73,10 +75,32 @@ getloc(){
     var m:any = d.getTime();
     var n:any = d.getTime();
   }
+  switchcards(){
+    var butjove:any = document.getElementById('butjove');
+    var but10:any = document.getElementById('but10');
+    var steps =0.1;
+    var but10counter;
+    var butjovecounter;
+    if(this.tjove){
+      but10.style.top = "-3%";
+      butjove.style.zIndex   = "0";
+      butjove.style.top = "-5%";
+      document.getElementById('card').setAttribute("src","../assets/imgs/t-10.png");
+      this.tjove=false;
+    }
+    else{
+    but10.style.top = "-5%";
+    butjove.style.zIndex   = "1";
+    butjove.style.top = "-3%";
+    this.tjove=true;
+    document.getElementById('card').setAttribute("src","../assets/imgs/card_t-jove.png");
+    }
+  }
+  changepage(){
+    this.navCtrl.push(HistoryPage);
+  }
   update(){
-
     this.navCtrl.setRoot(HomePage);
      this.navCtrl.popToRoot;
   }
-  
 }

@@ -6,23 +6,30 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding class="all">
-  <ngx-qrcode qrc-value = "Hola buenos dias" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
+    <button id="butjove" (click)="switchcards()"> T-Jove</button>
+    <button id="but10" (click)="switchcards()"> T-10</button>
+    <br><br><br><br><br><br>
+  <ngx-qrcode qrc-value = "Juan,bbminze@gmail.com" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
   </ngx-qrcode>
-  <ion-item>
+  <img id=card  (click)="changepage()" src="../assets/imgs/Card_t-jove.png"/>
+  <div id="bg2"></div>
+  <!-- <ion-item>
       <ion-label color="primary"  floating>Contenido del email</ion-label>
       <ion-input id="inputlabel" [(ngModel)]="content"></ion-input>
-    </ion-item>
-  <ion-card *ngIf="scannedCode">
+    </ion-item> -->
+  <!-- <ion-card *ngIf="scannedCode">
       <ion-card-content>
         Result from Scan: {{ scannedCode }}
       </ion-card-content>  </ion-card>  
   <button ion-button round (click)='createCode()'>Send Mail</button>
   <button ion-button round (click)='scanCode()'>Qr</button>
-  <button ion-button round (click)='getloc()'>Location</button>
-  <div id="divisor"></div>
+  <button ion-button round (click)='getloc()'>Location</button> -->
+  <div hidden id="divisor"></div> 
+      <!-- <div class="contenedor_1">
+        <div class="contenedor_2">
+          <div class="datos_restante porcentaje">62 dies</div>
+        </div>
+      </div> -->
   <script>
-    window.onclick = changetext();
-    function changetext(){
-    document.getElementById('divisor').innerHTML="asdfsafsad";}
   </script>
 </ion-content>

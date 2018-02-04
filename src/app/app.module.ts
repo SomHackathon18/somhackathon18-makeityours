@@ -9,10 +9,12 @@ import { HomePage } from '../pages/home/home';
 import { SQLite,SQLiteObject } from "@ionic-native/sqlite";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Geolocation } from '@ionic-native/geolocation';
+import { HistoryPage } from "../pages/history/history";
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    HistoryPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { Geolocation } from '@ionic-native/geolocation';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    HistoryPage
   ],
   providers: [
     StatusBar,

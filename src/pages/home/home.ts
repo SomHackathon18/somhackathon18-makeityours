@@ -43,7 +43,7 @@ export class HomePage {
     }, (err) => {
         console.log('Error: ', err);
     });
-    this.createCode;
+    this.createCode();
   }
 getloc(){
   this.var4="lon=";

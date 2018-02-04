@@ -52,6 +52,16 @@ getloc(){
     this.var4=this.var4.concat(this.lat);
     this.var5=this.var5.concat(this.long);
     this.var2='store=zara'; 
+
+    console.log(this.var1);
+    console.log(this.var2);
+    console.log(this.var3);
+    console.log(this.var4);
+    console.log(this.var5);
+
+    this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,"&",this.var4,"&",this.var5,this.tagend);
+
+    console.log(this.tagcomplete);
     alert( this.var1+ '\n' +
     this.var2+ '\n' +
     this.var3+ '\n' +
@@ -60,8 +70,7 @@ getloc(){
 });
 }
   createCode() {
-    this.var3=this.var3.concat(this.content,'"');
-    this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,"&",this.var4,"&",this.var5,this.tagend);
+    console.log(this.tagcomplete);
     document.getElementById('divisor').innerHTML=this.tagcomplete;
     this.createdCode = this.qrData;
     this.update();

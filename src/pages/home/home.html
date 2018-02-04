@@ -9,10 +9,10 @@
     <button id="butjove" (click)="switchcards()"> T-Jove</button>
     <button id="but10" (click)="switchcards()"> T-10</button>
     <br><br><br><br><br><br>
-  <ngx-qrcode qrc-valu (click)="scanCode()" = "Juan,bbminze@gmail.com" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
+  <ngx-qrcode qrc-valu = "Juan,bbminze@gmail.com" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
   </ngx-qrcode>
   <img id=card  (click)="changepage()" src="../assets/imgs/Card_t-jove.png"/>
-  <div id="bg2"></div>
+  <div (click)='createCode()' id="bg2"></div>
   <!-- <ion-item>
       <ion-label color="primary"  floating>Contenido del email</ion-label>
       <ion-input id="inputlabel" [(ngModel)]="content"></ion-input>

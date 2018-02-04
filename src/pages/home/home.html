@@ -11,8 +11,9 @@
     <br><br><br><br><br><br>
   <ngx-qrcode qrc-valu = "Juan,bbminze@gmail.com" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
   </ngx-qrcode>
+  <button ion-button round id="qrbut" (click)='createCode()'>QR</button>
   <img id=card  (click)="changepage()" src="../assets/imgs/Card_t-jove.png"/>
-  <div (click)='createCode()' id="bg2"></div>
+  <div id="bg2"></div>
   <!-- <ion-item>
       <ion-label color="primary"  floating>Contenido del email</ion-label>
       <ion-input id="inputlabel" [(ngModel)]="content"></ion-input>

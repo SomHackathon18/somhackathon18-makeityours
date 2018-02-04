@@ -70,7 +70,7 @@ getloc(){
     this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,this.tagend);
     document.getElementById('divisor').innerHTML=this.tagcomplete;
     this.createdCode = this.qrData;
-    this.update();
+    // this.update();
   }
   update(){
     var vari=0;

@@ -1,31 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Make it yours
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding class="all">
-  The world is your oyster.dddd
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
   <ngx-qrcode qrc-value = "Hola buenos dias" qrc-class = "aclass" qrc-errorCorrectionLevel = "L">
   </ngx-qrcode>
   <ion-item>
-      <ion-label color="primary"  floating>Envia un mensaje</ion-label>
+      <ion-label color="primary"  floating>Contenido del email</ion-label>
       <ion-input id="inputlabel" [(ngModel)]="content"></ion-input>
     </ion-item>
   <ion-card *ngIf="scannedCode">
       <ion-card-content>
         Result from Scan: {{ scannedCode }}
-      </ion-card-content>  </ion-card>
-  <!-- <button ion-button round (click)='update()'>Round button</button> -->
-  
-  <button ion-button round (click)='createCode()'>Round button</button>
-  <button ion-button round (click)='scanCode()'>Round button</button>
-  <div id="divisor">Testin</div>
-  <!-- <iframe id=iframeId src="http://www.minze.byethost7.com/sendmailqr?name=tienda_de_confianza&mail=whatthefuck@gmail.com&content=Se_te_ha_perdido_el_chico_en_esta_tienda"></iframe> -->
+      </ion-card-content>  </ion-card>  
+  <button ion-button round (click)='createCode()'>Send Mail</button>
+  <button ion-button round (click)='scanCode()'>Qr</button>
+  <button ion-button round (click)='getloc()'>Location</button>
+  <div id="divisor"></div>
   <script>
     window.onclick = changetext();
     function changetext(){

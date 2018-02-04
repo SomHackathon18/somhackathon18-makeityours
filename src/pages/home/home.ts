@@ -40,10 +40,10 @@ export class HomePage {
       var parts=this.scannedCode.split(",");
       this.var1=this.var1.concat(parts[0]);
       this.var3=this.var3.concat(parts[1]);
+    this.createCode();
     }, (err) => {
         console.log('Error: ', err);
     });
-    this.createCode();
   }
 getloc(){
   this.var4="lon=";

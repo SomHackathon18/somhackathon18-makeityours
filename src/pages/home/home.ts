@@ -51,12 +51,12 @@ getloc(){
     this.lat = position.coords.latitude;
     this.long = position.coords.longitude;
     this.var4=this.var4.concat(this.lat);
-    this.var5=this.var5.concat(this.long);
-    console.log(this.var1);
-    console.log(this.var2);
-    console.log(this.var3);
-    console.log(this.var4);
-    console.log(this.var5);
+    this.var5=this.var5.concat(this.long); 
+    alert( this.var1+ '\n' +
+    this.var2+ '\n' +
+    this.var3+ '\n' +
+    this.var4+ '\n' +
+    this.var5+ '\n');
 });
 }
   createCode() {

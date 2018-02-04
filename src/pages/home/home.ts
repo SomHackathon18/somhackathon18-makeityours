@@ -27,7 +27,7 @@ export class HomePage {
   var5:string="lat=";
   var6:string="hobbie5=";
   var7:string="hobbie6=";
-  tagcomplete:string = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,this.tagend);
+  tagcomplete:string = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,"&",this.var4,"&",this.var5,this.tagend);
   constructor(public navCtrl: NavController,private barcodeScanner: BarcodeScanner,public geolocation: Geolocation) {
     console.log(this.tagcomplete);
     
@@ -61,7 +61,7 @@ getloc(){
 }
   createCode() {
     this.var3=this.var3.concat(this.content,'"');
-    this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,this.tagend);
+    this.tagcomplete = this.tagstart.concat(this.url,this.var1,"&",this.var2,"&",this.var3,"&",this.var4,"&",this.var5,this.tagend);
     document.getElementById('divisor').innerHTML=this.tagcomplete;
     this.createdCode = this.qrData;
     this.update();
